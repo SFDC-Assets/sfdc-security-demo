@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Report_Anomaly_Event_Name__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Report Anomaly Event Name</description>
+    <externalId>false</externalId>
+    <label>Report Anomaly Event Name</label>
+    <referenceTo>Report_Anomaly_Event_Store__c</referenceTo>
+    <relationshipLabel>Threat Detection Feedback</relationshipLabel>
+    <relationshipName>Threat_Detection_Feedback</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

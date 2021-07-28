@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Response__c</fullName>
+    <description>Response</description>
+    <externalId>false</externalId>
+    <label>Response</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Malicious</fullName>
+                <default>false</default>
+                <label>Malicious</label>
+            </value>
+            <value>
+                <fullName>Suspicious</fullName>
+                <default>false</default>
+                <label>Suspicious</label>
+            </value>
+            <value>
+                <fullName>Not a Threat</fullName>
+                <default>false</default>
+                <label>Not a Threat</label>
+            </value>
+            <value>
+                <fullName>Unknown</fullName>
+                <default>false</default>
+                <label>Unknown</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

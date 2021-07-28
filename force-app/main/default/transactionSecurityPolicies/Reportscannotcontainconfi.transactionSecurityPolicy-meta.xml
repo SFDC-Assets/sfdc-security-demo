@@ -7,7 +7,7 @@
         <notifications>
             <inApp>true</inApp>
             <sendEmail>false</sendEmail>
-            <user>test-h0qaf73k2hdb@example.com</user>
+            <user>admin106@transaction.demo</user>
         </notifications>
         <twoFactorAuthentication>false</twoFactorAuthentication>
     </action>
@@ -16,7 +16,7 @@
     <description>Please remove confidential fields from your report.</description>
     <developerName>Reportscannotcontainconfi</developerName>
     <eventName>ReportEvent</eventName>
-    <executionUser>test-h0qaf73k2hdb@example.com</executionUser>
+    <executionUser>admin106@transaction.demo</executionUser>
     <masterLabel>Reports cannot contain confidential fields</masterLabel>
     <type>CustomApexPolicy</type>
 </TransactionSecurityPolicy>

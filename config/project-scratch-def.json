@@ -1,13 +1,19 @@
 {
-  "orgName": "Transaction Security Demo",
+  "orgName": "jonathan.zhou company",
   "edition": "Developer",
-  "features": ["SecurityEventEnabled"],
+  "hasSampleData": true,
+  "features": ["EnableSetPasswordInApi", "EventLogFile", "SecurityEventEnabled", "WavePlatform", "EinsteinAnalyticsPlus", "AnalyticsAdminPerms", "AnalyticsAppEmbedded", "DevelopmentWave", "EinsteinAnalyticsPlus", "DataProcessingEngine"],
   "settings": {
-    "pathAssistantSettings": {
-      "pathAssistantEnabled": true
+    "lightningExperienceSettings": {
+      "enableS1DesktopEnabled": true
+    },
+    "mobileSettings": {
+      "enableS1EncryptedStoragePref2": false
     },
     "eventSettings": {
-      "enableTransactionSecurityPolicies": true
+      "enableDeleteMonitoringData": true,
+      "enableTransactionSecurityPolicies": true,
+      "enableEventLogWaveIntegration": true
     }
   }
 }

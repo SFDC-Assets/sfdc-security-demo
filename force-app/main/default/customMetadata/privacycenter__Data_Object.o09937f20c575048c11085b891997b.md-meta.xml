@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>o09937f20c575048c11085b891997b</label>
+    <protected>false</protected>
+    <values>
+        <field>privacycenter__API_Name__c</field>
+        <value xsi:type="xsd:string">Case</value>
+    </values>
+    <values>
+        <field>privacycenter__Active__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>privacycenter__Archive_Value__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>privacycenter__Batch_Data__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>privacycenter__Child_Object__c</field>
+        <value xsi:type="xsd:boolean">false</value>
+    </values>
+    <values>
+        <field>privacycenter__Custom__c</field>
+        <value xsi:type="xsd:boolean">false</value>
+    </values>
+    <values>
+        <field>privacycenter__Data_Policy__c</field>
+        <value xsi:type="xsd:string">CaseArchive</value>
+    </values>
+    <values>
+        <field>privacycenter__Filter_Enabled__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>privacycenter__Hard_Delete__c</field>
+        <value xsi:type="xsd:boolean">false</value>
+    </values>
+    <values>
+        <field>privacycenter__Last_Prepped_Date__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>privacycenter__Master_Object__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>privacycenter__Number_of_Fields__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>privacycenter__Parent_Object_API_Name__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>privacycenter__Parent_Object_ID__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>privacycenter__Raw_Filter_Data__c</field>
+        <value xsi:type="xsd:string">{&quot;applyconditions&quot;:&quot;and&quot;,&quot;conditionList&quot;:[{&quot;field&quot;:{&quot;name&quot;:&quot;ClosedDate&quot;,&quot;type&quot;:&quot;DATETIME&quot;},&quot;operator&quot;:&quot;is before&quot;,&quot;criteria&quot;:&quot;365&quot;,&quot;dateType&quot;:&quot;Relative&quot;,&quot;index&quot;:0},{&quot;field&quot;:{&quot;name&quot;:&quot;Status&quot;,&quot;type&quot;:&quot;STRING&quot;},&quot;operator&quot;:&quot;equals&quot;,&quot;criteria&quot;:&quot;Closed&quot;,&quot;index&quot;:1}]}</value>
+    </values>
+    <values>
+        <field>privacycenter__Record_Caching__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>privacycenter__Record_Count__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>privacycenter__Record_Retention__c</field>
+        <value xsi:type="xsd:string">Transform</value>
+    </values>
+    <values>
+        <field>privacycenter__Run_In_Poly__c</field>
+        <value xsi:type="xsd:boolean">false</value>
+    </values>
+    <values>
+        <field>privacycenter__Run_In_Serial__c</field>
+        <value xsi:type="xsd:boolean">false</value>
+    </values>
+    <values>
+        <field>privacycenter__Where_Criteria_LT__c</field>
+        <value xsi:type="xsd:string">ClosedDate &lt; LAST_N_DAYS:365 AND Status = &apos;Closed&apos;</value>
+    </values>
+    <values>
+        <field>privacycenter__Where_Criteria_PG_Cache_LT__c</field>
+        <value xsi:type="xsd:string">cache.case.closeddate &lt; current_timestamp - interval &apos;365 day&apos; AND cache.case.status = &apos;Closed&apos;</value>
+    </values>
+    <values>
+        <field>privacycenter__Where_Criteria_PG_Cache__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>privacycenter__Where_Criteria_PG_LT__c</field>
+        <value xsi:type="xsd:string">salesforce.case.closeddate &lt; current_timestamp - interval &apos;365 day&apos; AND salesforce.case.status = &apos;Closed&apos;</value>
+    </values>
+    <values>
+        <field>privacycenter__Where_Criteria_PG__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>privacycenter__Where_Criteria__c</field>
+        <value xsi:nil="true"/>
+    </values>
+</CustomMetadata>

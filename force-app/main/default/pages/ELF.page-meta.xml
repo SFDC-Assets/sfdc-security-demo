@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApexPage xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>52.0</apiVersion>
+    <availableInTouch>true</availableInTouch>
+    <confirmationTokenRequired>false</confirmationTokenRequired>
+    <label>ELF</label>
+    <packageVersions>
+        <majorNumber>3</majorNumber>
+        <minorNumber>2</minorNumber>
+        <namespace>smon</namespace>
+    </packageVersions>
+</ApexPage>

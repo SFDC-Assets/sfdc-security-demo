@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <brand>
+        <headerColor>#E9696E</headerColor>
+        <logo>security</logo>
+        <logoVersion>1</logoVersion>
+        <shouldOverrideOrgTheme>false</shouldOverrideOrgTheme>
+    </brand>
+    <description>Keeping our employees and customers safe &amp; secure.</description>
+    <formFactors>Small</formFactors>
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <label>Security</label>
+    <navType>Standard</navType>
+    <tabs>MobileEmailObject__c</tabs>
+    <tabs>MobileEnforcedPolicyObject__c</tabs>
+    <tabs>MobileScreenshotObject__c</tabs>
+    <tabs>MobileTelephonyObject__c</tabs>
+    <uiType>Lightning</uiType>
+    <utilityBar>Security_UtilityBar</utilityBar>
+</CustomApplication>

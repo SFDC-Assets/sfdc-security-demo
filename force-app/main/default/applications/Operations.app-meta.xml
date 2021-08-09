@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <brand>
+        <headerColor>#F87E77</headerColor>
+        <logo>operations</logo>
+        <logoVersion>1</logoVersion>
+        <shouldOverrideOrgTheme>false</shouldOverrideOrgTheme>
+    </brand>
+    <description>Administer business processes to improve efficiency.</description>
+    <formFactors>Small</formFactors>
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <label>Operations</label>
+    <navType>Standard</navType>
+    <tabs>standard-Today</tabs>
+    <tabs>standard-ProcessInstanceWorkitem</tabs>
+    <tabs>standard-AuthorizationForm</tabs>
+    <tabs>standard-Forecasting3</tabs>
+    <tabs>standard-OperatingHours</tabs>
+    <tabs>standard-Task</tabs>
+    <tabs>standard-TimeSheet</tabs>
+    <tabs>standard-WorkCapacityLimit</tabs>
+    <tabs>standard-WorkType</tabs>
+    <uiType>Lightning</uiType>
+    <utilityBar>Operations_UtilityBar</utilityBar>
+</CustomApplication>

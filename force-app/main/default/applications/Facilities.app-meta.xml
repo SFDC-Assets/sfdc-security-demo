@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <brand>
+        <headerColor>#E56798</headerColor>
+        <logo>facilities</logo>
+        <logoVersion>1</logoVersion>
+        <shouldOverrideOrgTheme>false</shouldOverrideOrgTheme>
+    </brand>
+    <description>Manage offices, store locations, and manufacturing facilities.</description>
+    <formFactors>Small</formFactors>
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <label>Facilities</label>
+    <navType>Standard</navType>
+    <tabs>standard-Today</tabs>
+    <tabs>standard-File</tabs>
+    <tabs>standard-CollaborationGroup</tabs>
+    <tabs>standard-OtherUserProfile</tabs>
+    <tabs>standard-ServiceAppointment</tabs>
+    <tabs>standard-ServiceCrew</tabs>
+    <tabs>standard-ServiceCrewMember</tabs>
+    <tabs>standard-WorkOrder</tabs>
+    <uiType>Lightning</uiType>
+    <utilityBar>Facilities_UtilityBar</utilityBar>
+</CustomApplication>

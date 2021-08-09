@@ -4,10 +4,6 @@
         <application>Threat_Detection</application>
         <visible>true</visible>
     </applicationVisibilities>
-    <applicationVisibilities>
-        <application>standard__ThreatDetection</application>
-        <visible>true</visible>
-    </applicationVisibilities>
     <fieldPermissions>
         <editable>true</editable>
         <field>Api_Anomaly_Event_Store__c.EventIdentifier__c</field>

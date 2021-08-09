@@ -7,7 +7,7 @@
         <notifications>
             <inApp>true</inApp>
             <sendEmail>false</sendEmail>
-            <user>admin106@transaction.demo</user>
+            <user>main5@security.demo</user>
         </notifications>
         <twoFactorAuthentication>false</twoFactorAuthentication>
     </action>
@@ -15,7 +15,7 @@
     <description>A mass export action was blocked.</description>
     <developerName>ReportExportBlocked</developerName>
     <eventName>ReportEvent</eventName>
-    <executionUser>admin106@transaction.demo</executionUser>
+    <executionUser>main5@security.demo</executionUser>
     <flow>PolicyCondition_YJAxFqSJSZDBJHeYYYwz</flow>
     <masterLabel>Report Export Blocked</masterLabel>
     <type>CustomConditionBuilderPolicy</type>

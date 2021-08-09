@@ -1,4 +1,4 @@
-# Transaction Security Demo
+# The Big Security Demo
 
 This project is part of a series of one-feature Salesforce Platform demos.
 
@@ -19,8 +19,8 @@ ___
 2. Clone this repository:
 
 ```
-git clone https://github.com/gabesumner/transaction-security
-cd transaction-security
+git clone https://github.com/SFDC-Assets/sfdc-security-demo
+cd sfdc-security-demo
 ```
 
 3. Install [**shane-sfdx-plugins**](https://github.com/mshanemc/shane-sfdx-plugins) (if you don't already have it)
@@ -42,4 +42,4 @@ cd transaction-security
   sh orgInit.sh
   ```
 
-6. Check out the demo guide on [PlatformDemos.com](https://www.platformdemos.com) for the Transaction Security demo.
+6. Check out the demo guide on [PlatformDemos.com](https://www.platformdemos.com) for the full security demo.

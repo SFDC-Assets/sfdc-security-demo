@@ -1,8 +1,8 @@
 {
-  "orgName": "jonathan.zhou company",
+  "orgName": "Main Security Demo",
   "edition": "Developer",
   "hasSampleData": true,
-  "features": ["PlatformEncryption", "AdditionalFieldHistory:40", "DataMaskUser", "MobileSecurity", "EnableSetPasswordInApi", "EventLogFile", "SecurityEventEnabled", "WavePlatform", "EinsteinAnalyticsPlus", "AnalyticsAdminPerms", "AnalyticsAppEmbedded", "DevelopmentWave", "EinsteinAnalyticsPlus", "DataProcessingEngine", "AddCustomApps:29"],
+  "features": ["PrivacyAnalytics", "PlatformEncryption", "AdditionalFieldHistory:40", "FieldAuditTrail", "DataMaskUser", "MobileSecurity", "EnableSetPasswordInApi", "EventLogFile", "SecurityEventEnabled", "WavePlatform", "EinsteinAnalyticsPlus", "AnalyticsAdminPerms", "AnalyticsAppEmbedded", "DevelopmentWave", "EinsteinAnalyticsPlus", "DataProcessingEngine", "AddCustomApps:29"],
   "settings": {
     "lightningExperienceSettings": {
       "enableS1DesktopEnabled": true

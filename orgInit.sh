@@ -11,6 +11,9 @@ sfdx force:package:install -p 04t1t000003DLALAA4 -w 10
 # Install data mask
 sfdx force:package:install -w 20 -r -p 04t3k000001yuer
 
+# Install Einstein Data Detect
+sfdx force:package:install -w 20 -r -p 04t5e000000zR3E
+
 # Install Privacy Center
 sfdx force:package:install -r --package=04t3t000002zQ6IAAU --wait 15 
 
@@ -45,3 +48,8 @@ sfdx automig:load --inputdir ./data
 
 # Generate records for threat detection
 sfdx force:apex:execute -f scripts/apex/genRecords.apex 
+
+
+# https://curious-wolf-lg81xy-dev-ed.my.salesforce.com/
+# demo.user-one@demo.com
+# Sup3rmn!!

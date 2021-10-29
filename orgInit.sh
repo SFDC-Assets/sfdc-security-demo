@@ -47,10 +47,4 @@ sfdx shane:connectedapp:attributes -n "Salesforce for iOS" -a customAttributes.j
 sfdx automig:load --inputdir ./data
 
 # Generate records for threat detection
-sfdx force:apex:execute -f scripts/apex/genRecords.apex 
-
-
-# https://curious-wolf-lg81xy-dev-ed.my.salesforce.com/
-# demo.user-one@demo.com
-# Sup3rmn!!
-# https://docs.google.com/document/d/1KcAhnHHbl5a3On_IrUM752iVzN2Qeg0S2PCQLwtc8hE/edit
+sfdx force:apex:execute -f scripts/apex/genRecords.apex

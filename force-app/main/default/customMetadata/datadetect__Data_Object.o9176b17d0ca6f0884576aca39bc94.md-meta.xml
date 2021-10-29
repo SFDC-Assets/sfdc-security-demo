@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>o9176b17d0ca6f0884576aca39bc94</label>
+    <protected>false</protected>
+    <values>
+        <field>datadetect__API_Name__c</field>
+        <value xsi:type="xsd:string">Account</value>
+    </values>
+    <values>
+        <field>datadetect__Active__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>datadetect__Custom__c</field>
+        <value xsi:type="xsd:boolean">false</value>
+    </values>
+    <values>
+        <field>datadetect__Data_Policy__c</field>
+        <value xsi:type="xsd:string">Sample</value>
+    </values>
+    <values>
+        <field>datadetect__Filter_Enabled__c</field>
+        <value xsi:type="xsd:boolean">false</value>
+    </values>
+    <values>
+        <field>datadetect__Number_of_Fields__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>datadetect__Pattern_Match_Types__c</field>
+        <value xsi:type="xsd:string">[&quot;CREDIT_CARD&quot;,&quot;EMAIL&quot;,&quot;DOMAIN&quot;,&quot;IP_ADDRESS&quot;,&quot;SSN&quot;]</value>
+    </values>
+    <values>
+        <field>datadetect__Raw_Filter_Data__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>datadetect__Record_Count__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>datadetect__Where_Criteria_LT__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>datadetect__Where_Criteria_PG_Cache_LT__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>datadetect__Where_Criteria_PG_LT__c</field>
+        <value xsi:nil="true"/>
+    </values>
+</CustomMetadata>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Sample</label>
+    <protected>false</protected>
+    <values>
+        <field>datadetect__Active__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>datadetect__Created_By__c</field>
+        <value xsi:type="xsd:string">User User</value>
+    </values>
+    <values>
+        <field>datadetect__Created_Date__c</field>
+        <value xsi:type="xsd:date">2021-10-29</value>
+    </values>
+    <values>
+        <field>datadetect__Description__c</field>
+        <value xsi:type="xsd:string">PII Scan</value>
+    </values>
+    <values>
+        <field>datadetect__Language__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>datadetect__Last_Edit_By__c</field>
+        <value xsi:type="xsd:string">User User</value>
+    </values>
+    <values>
+        <field>datadetect__Last_Edit__c</field>
+        <value xsi:type="xsd:dateTime">2021-10-29T20:25:52.000Z</value>
+    </values>
+    <values>
+        <field>datadetect__Run_Frequency__c</field>
+        <value xsi:type="xsd:string">Once</value>
+    </values>
+    <values>
+        <field>datadetect__Scheduled_Start__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>datadetect__Status__c</field>
+        <value xsi:type="xsd:string">Active</value>
+    </values>
+    <values>
+        <field>datadetect__Type__c</field>
+        <value xsi:type="xsd:string">Scan</value>
+    </values>
+</CustomMetadata>

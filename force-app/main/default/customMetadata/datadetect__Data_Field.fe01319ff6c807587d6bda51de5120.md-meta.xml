@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>fe01319ff6c807587d6bda51de5120</label>
+    <protected>false</protected>
+    <values>
+        <field>datadetect__API_Name__c</field>
+        <value xsi:type="xsd:string">CustomerPriority__c</value>
+    </values>
+    <values>
+        <field>datadetect__Active__c</field>
+        <value xsi:type="xsd:boolean">false</value>
+    </values>
+    <values>
+        <field>datadetect__Category__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>datadetect__Custom__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>datadetect__Data_Object__c</field>
+        <value xsi:type="xsd:string">o9176b17d0ca6f0884576aca39bc94</value>
+    </values>
+    <values>
+        <field>datadetect__Field_Length__c</field>
+        <value xsi:type="xsd:double">255.0</value>
+    </values>
+    <values>
+        <field>datadetect__Field_Type__c</field>
+        <value xsi:type="xsd:string">Text</value>
+    </values>
+    <values>
+        <field>datadetect__Index_Number__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>datadetect__Required__c</field>
+        <value xsi:type="xsd:boolean">false</value>
+    </values>
+    <values>
+        <field>datadetect__Type__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>datadetect__Unique__c</field>
+        <value xsi:type="xsd:boolean">false</value>
+    </values>
+</CustomMetadata>

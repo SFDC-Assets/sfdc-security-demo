@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>f07ebbedec7d3cde11ad3b01183e48</label>
+    <protected>false</protected>
+    <values>
+        <field>datadetect__API_Name__c</field>
+        <value xsi:type="xsd:string">LastName</value>
+    </values>
+    <values>
+        <field>datadetect__Active__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>datadetect__Category__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>datadetect__Custom__c</field>
+        <value xsi:type="xsd:boolean">false</value>
+    </values>
+    <values>
+        <field>datadetect__Data_Object__c</field>
+        <value xsi:type="xsd:string">oe8b339709ae45a9e9219cab237091</value>
+    </values>
+    <values>
+        <field>datadetect__Field_Length__c</field>
+        <value xsi:type="xsd:double">80.0</value>
+    </values>
+    <values>
+        <field>datadetect__Field_Type__c</field>
+        <value xsi:type="xsd:string">Text</value>
+    </values>
+    <values>
+        <field>datadetect__Index_Number__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>datadetect__Required__c</field>
+        <value xsi:type="xsd:boolean">false</value>
+    </values>
+    <values>
+        <field>datadetect__Type__c</field>
+        <value xsi:type="xsd:string">Scan</value>
+    </values>
+    <values>
+        <field>datadetect__Unique__c</field>
+        <value xsi:type="xsd:boolean">false</value>
+    </values>
+</CustomMetadata>

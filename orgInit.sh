@@ -6,7 +6,7 @@ sfdx shane:org:create -f config/project-scratch-def.json -d 5 -s --wait 60 --use
 sfdx force:package:install -p 04t3A000001AJf2QAG --wait 20
 
 # Install streaming monitor
-sfdx force:package:install -p 04t1t000003DLALAA4 -w 10
+sfdx force:package:install -p 04t1t000003Po3QAAS -w 10
 
 # Install data mask
 sfdx force:package:install -w 20 -r -p 04t3k000001yuer

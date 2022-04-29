@@ -16,13 +16,3 @@ jobs:
                 name: production
                 id: production
                 uses: mshanemc/deployer-check-javascript-action@master
-    prerelease:
-        runs-on: ubuntu-latest
-        name: prerelease deployer end-to-end test
-        steps:
-            -
-                name: prerelease
-                id: prerelease
-                uses: mshanemc/deployer-check-javascript-action@master
-                with:
-                    deployer-url: 'https://deployer-prerelease.herokuapp.com'

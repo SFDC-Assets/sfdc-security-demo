@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-    <label>Contact</label>
+    <label>FeedItem</label>
     <protected>false</protected>
     <values>
         <field>datamask__API_Name__c</field>
-        <value xsi:type="xsd:string">Contact</value>
+        <value xsi:type="xsd:string">FeedItem</value>
     </values>
     <values>
         <field>datamask__Active__c</field>
-        <value xsi:type="xsd:boolean">true</value>
+        <value xsi:type="xsd:boolean">false</value>
     </values>
     <values>
         <field>datamask__Batch_Data__c</field>
@@ -32,15 +32,15 @@
     </values>
     <values>
         <field>datamask__Master_Object__c</field>
-        <value xsi:type="xsd:string">AccountId</value>
+        <value xsi:type="xsd:string">ParentId</value>
     </values>
     <values>
         <field>datamask__Number_of_Fields__c</field>
-        <value xsi:type="xsd:double">28.0</value>
+        <value xsi:nil="true"/>
     </values>
     <values>
         <field>datamask__Raw_Filter_Data__c</field>
-        <value xsi:type="xsd:string">{&quot;applyconditions&quot;:&quot;custom&quot;,&quot;conditionList&quot;:[]}</value>
+        <value xsi:nil="true"/>
     </values>
     <values>
         <field>datamask__Record_Count__c</field>
@@ -48,7 +48,7 @@
     </values>
     <values>
         <field>datamask__Run_In_Poly__c</field>
-        <value xsi:type="xsd:boolean">false</value>
+        <value xsi:type="xsd:boolean">true</value>
     </values>
     <values>
         <field>datamask__Run_In_Serial__c</field>

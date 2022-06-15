@@ -23,6 +23,10 @@
         <value xsi:type="xsd:string">Sample</value>
     </values>
     <values>
+        <field>datamask__Filter_Enabled__c</field>
+        <value xsi:type="xsd:boolean">false</value>
+    </values>
+    <values>
         <field>datamask__Last_Prepped_Date__c</field>
         <value xsi:nil="true"/>
     </values>
@@ -35,6 +39,10 @@
         <value xsi:type="xsd:double">28.0</value>
     </values>
     <values>
+        <field>datamask__Raw_Filter_Data__c</field>
+        <value xsi:type="xsd:string">{&quot;applyconditions&quot;:&quot;custom&quot;,&quot;conditionList&quot;:[]}</value>
+    </values>
+    <values>
         <field>datamask__Record_Count__c</field>
         <value xsi:nil="true"/>
     </values>
@@ -45,5 +53,13 @@
     <values>
         <field>datamask__Run_In_Serial__c</field>
         <value xsi:type="xsd:boolean">false</value>
+    </values>
+    <values>
+        <field>datamask__Where_Criteria_LT__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>datamask__Where_Criteria__c</field>
+        <value xsi:nil="true"/>
     </values>
 </CustomMetadata>

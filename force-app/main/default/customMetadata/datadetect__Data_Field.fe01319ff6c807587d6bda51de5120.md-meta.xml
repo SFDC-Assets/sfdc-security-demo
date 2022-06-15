@@ -8,7 +8,7 @@
     </values>
     <values>
         <field>datadetect__Active__c</field>
-        <value xsi:type="xsd:boolean">false</value>
+        <value xsi:type="xsd:boolean">true</value>
     </values>
     <values>
         <field>datadetect__Category__c</field>
@@ -40,7 +40,7 @@
     </values>
     <values>
         <field>datadetect__Type__c</field>
-        <value xsi:nil="true"/>
+        <value xsi:type="xsd:string">Scan</value>
     </values>
     <values>
         <field>datadetect__Unique__c</field>

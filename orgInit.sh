@@ -9,7 +9,7 @@ sfdx force:package:install -p 04t3A000001AJf2QAG --wait 20
 sfdx force:package:install -p 04t1t000003Po3QAAS -w 10
 
 # Install data mask
-sfdx force:package:install -w 20 -r -p 04t3k000001yuer
+sfdx force:package:install -w 20 -r -p 04t3k0000027CCn
 
 # Install Einstein Data Detect
 sfdx force:package:install -w 20 -r -p 04t5e000000zR3E

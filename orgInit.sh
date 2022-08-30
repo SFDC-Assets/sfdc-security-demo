@@ -6,16 +6,16 @@ sfdx shane:org:create -f config/project-scratch-def.json -d 5 -s --wait 60 --use
 sfdx force:package:install -p 04t3A000001AJf2QAG --wait 20
 
 # Install streaming monitor
-sfdx force:package:install -p 04t1t000003Po3QAAS -w 10
+sfdx force:package:install -p 04t1t000003Po3QAAS -w 30
 
 # Install data mask
-sfdx force:package:install -w 20 -r -p 04t3k000001yuer
+sfdx force:package:install -w 30 -r -p 04t3k0000027CCn
 
 # Install Einstein Data Detect
-sfdx force:package:install -w 20 -r -p 04t5e000000zR3E
+sfdx force:package:install -w 30 -r -p 04t5e000000zR3E
 
 # Install Privacy Center
-sfdx force:package:install -r --package=04t3t000002zQ6IAAU --wait 15 
+sfdx force:package:install -r --package=04t3t000002zQ6IAAU --wait 30 
 
 # Updates the Transaction Security Policies to contain this scratch orgs username
 sfdx shane:tsp:username:update

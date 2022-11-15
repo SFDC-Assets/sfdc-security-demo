@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomTab xmlns="http://soap.sforce.com/2006/04/metadata">
-    <description>Created by Lightning App Builder</description>
-    <flexiPage>Field_Audit_Trail_Populator1</flexiPage>
-    <label>Field Audit Trail Populator</label>
-    <motif>Custom83: Pencil</motif>
-</CustomTab>

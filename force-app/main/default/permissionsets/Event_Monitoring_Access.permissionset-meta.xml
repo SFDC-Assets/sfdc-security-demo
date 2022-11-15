@@ -7,10 +7,6 @@
     <hasActivationRequired>false</hasActivationRequired>
     <label>Event Monitoring Access</label>
     <tabSettings>
-        <tab>Field_Audit_Trail_Populator</tab>
-        <visibility>Visible</visibility>
-    </tabSettings>
-    <tabSettings>
         <tab>Real_Time_Events</tab>
         <visibility>Visible</visibility>
     </tabSettings>

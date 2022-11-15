@@ -15,7 +15,7 @@ sfdx force:package:install -w 30 -r -p 04t3k0000027CCn
 sfdx force:package:install -w 30 -r -p 04t5e000000zR3E
 
 # Install Privacy Center
-sfdx force:package:install -r --package=04t3t000002qbJg --wait 30 
+sfdx force:package:install -r --package=04t3t000002lfh2 --wait 30 
 
 # Updates the Transaction Security Policies to contain this scratch orgs username
 sfdx shane:tsp:username:update

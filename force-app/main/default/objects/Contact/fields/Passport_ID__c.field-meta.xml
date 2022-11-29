@@ -2,6 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Passport_ID__c</fullName>
     <complianceGroup>PII</complianceGroup>
+    <encryptionScheme>ProbabilisticEncryption</encryptionScheme>
     <externalId>false</externalId>
     <label>Passport ID</label>
     <length>20</length>

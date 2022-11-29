@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"  standalone="yes"?>
+ <EncryptionKeySettings xmlns="http://soap.sforce.com/2006/04/metadata">
+   <enableCacheOnlyKeys>true</enableCacheOnlyKeys>
+   <canOptOutOfDerivationWithBYOK>true</canOptOutOfDerivationWithBYOK>
+   <enableReplayDetection>true</enableReplayDetection>
+ </EncryptionKeySettings>

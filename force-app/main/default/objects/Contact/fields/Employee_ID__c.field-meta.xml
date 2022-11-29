@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Employee_ID__c</fullName>
+    <businessStatus>Active</businessStatus>
+    <complianceGroup>PII</complianceGroup>
+    <encryptionScheme>ProbabilisticEncryption</encryptionScheme>
     <externalId>false</externalId>
     <label>Employee ID</label>
     <length>20</length>
     <required>false</required>
+    <securityClassification>Internal</securityClassification>
     <trackFeedHistory>false</trackFeedHistory>
     <type>Text</type>
     <unique>false</unique>

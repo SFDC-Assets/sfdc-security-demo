@@ -24,6 +24,7 @@ sfdx shane:tsp:username:update
 sfdx force:source:push
 
 # Assign user the permset
+sfdx shane:user:permset:assign -l User -g User -n PlatformEncryption
 sfdx force:user:permset:assign -n TransactionSecurity
 sfdx force:user:permset:assign -n MobileSecurity
 sfdx force:user:permset:assign -n Event_Monitoring_Access
@@ -35,6 +36,16 @@ sfdx force:user:permset:assign -n PrivacyCenter
 # Set the default password.
 sfdx shane:user:password:set -g User -l User -p salesforce1
 
+# Create Tenant Secrets
+sfdx force:data:record:create -s TenantSecret -v "Description=ProbabilisticKey"
+sfdx force:data:record:create -s TenantSecret -v "Description=SearchKey Type=SearchIndex"
+sfdx force:data:record:create -s TenantSecret -v "Description=EventBusKey Type=EventBus"
+
+# Deploy platform encryption settings
+sfdx force:mdapi:deploy -d ./src -w 5
+
+sfdx force:data:record:create -s TenantSecret -v "Description=DeterministicKey Type=DeterministicData"
+
 # Create another user for LoginAs
 sfdx force:user:create -a other-user
 
@@ -45,6 +56,9 @@ sfdx shane:connectedapp:attributes -n "Salesforce for iOS" -a customAttributes.j
 
 # Import the data required by the demo
 sfdx automig:load --inputdir ./data
+sfdx automig:load --inputdir ./encryption-data
+
+sfdx shane:data:file:upload -f ./attachment/wp-platform-encryption-architecture.pdf -p `sfdx shane:data:id:query -o Case -w "Subject='Does not align with specs'"`
 
 # Generate records for threat detection
 sfdx force:apex:execute -f scripts/apex/genRecords.apex

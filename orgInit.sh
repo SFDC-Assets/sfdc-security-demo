@@ -28,6 +28,7 @@ sfdx shane:user:permset:assign -l User -g User -n PlatformEncryption
 sfdx force:user:permset:assign -n TransactionSecurity
 sfdx force:user:permset:assign -n MobileSecurity
 sfdx force:user:permset:assign -n Event_Monitoring_Access
+sfdx force:user:permset:assign -n fat_simulator
 sfdx shane:user:psl -l User -g User -n datamask_DataMaskUserPsl
 sfdx shane:user:permset:assign -l User -g User -n datamask
 sfdx shane:user:psl -n 'Privacy Center User' -g User -l User
@@ -57,8 +58,11 @@ sfdx shane:connectedapp:attributes -n "Salesforce for iOS" -a customAttributes.j
 # Import the data required by the demo
 sfdx automig:load --inputdir ./data
 sfdx automig:load --inputdir ./encryption-data
+# sfdx automig:load --inputdir ./cmdt
 
 sfdx shane:data:file:upload -f ./attachment/wp-platform-encryption-architecture.pdf -p `sfdx shane:data:id:query -o Case -w "Subject='Does not align with specs'"`
 
 # Generate records for threat detection
 sfdx force:apex:execute -f scripts/apex/genRecords.apex
+sfdx force:apex:execute -f scripts/apex/genContactHistory.apex
+

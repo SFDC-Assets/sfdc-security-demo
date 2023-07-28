@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <brand>
+        <headerColor>#109AD6</headerColor>
+        <shouldOverrideOrgTheme>false</shouldOverrideOrgTheme>
+    </brand>
+    <description>Customer 360 Privacy Center is a fast and easy way to manage your sensitive and business-critical data.</description>
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <label>Privacy Center</label>
+    <navType>Standard</navType>
+    <subscriberTabs>standard-PrivacyPreferenceCenter</subscriberTabs>
+    <subscriberTabs>standard-PrivacyRequest</subscriberTabs>
+    <tabs>privacycenter__Home</tabs>
+    <tabs>privacycenter__Data_Policies</tabs>
+    <tabs>privacycenter__Privacy_Center_Schedule__c</tabs>
+    <tabs>privacycenter__RTBF</tabs>
+    <tabs>privacycenter__RTBF_Request__c</tabs>
+    <tabs>privacycenter__Masking_Execution_Log__c</tabs>
+    <tabs>privacycenter__Settings</tabs>
+    <uiType>Lightning</uiType>
+</CustomApplication>

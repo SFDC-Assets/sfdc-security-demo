@@ -6,17 +6,16 @@
         <freezeUser>false</freezeUser>
         <notifications>
             <inApp>true</inApp>
-            <sendEmail>false</sendEmail>
+            <sendEmail>true</sendEmail>
             <user>main262@security.demo</user>
         </notifications>
         <twoFactorAuthentication>false</twoFactorAuthentication>
     </action>
     <active>true</active>
-    <description>A mass export action was blocked.</description>
-    <developerName>ReportExportBlocked</developerName>
-    <eventName>ReportEvent</eventName>
+    <apexClass>FileEventTransactionHandler</apexClass>
+    <developerName>BlockDownloadingFilesfrom</developerName>
+    <eventName>FileEventStore</eventName>
+    <masterLabel>Block Downloading Files from Closed Cases</masterLabel>
+    <type>CustomApexPolicy</type>
     <executionUser>main262@security.demo</executionUser>
-    <flow>PolicyCondition_YJAxFqSJSZDBJHeYYYwz</flow>
-    <masterLabel>Report Export Blocked</masterLabel>
-    <type>CustomConditionBuilderPolicy</type>
 </TransactionSecurityPolicy>

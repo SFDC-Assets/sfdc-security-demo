@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Data_Sensitivity_Levels_Restricted__c</fullName>
+    <externalId>false</externalId>
+    <label>Data Sensitivity Levels Restricted</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Confidential</fullName>
+                <default>false</default>
+                <label>Confidential</label>
+            </value>
+            <value>
+                <fullName>Mission Critical</fullName>
+                <default>false</default>
+                <label>Mission Critical</label>
+            </value>
+            <value>
+                <fullName>Restricted</fullName>
+                <default>false</default>
+                <label>Restricted</label>
+            </value>
+            <value>
+                <fullName>Internal</fullName>
+                <default>false</default>
+                <label>Internal</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

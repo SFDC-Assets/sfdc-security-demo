@@ -1,3 +1,4 @@
 {
-  "target-org": "main5171@security.demo"
+  "target-org": "main262@security.demo",
+  "target-dev-hub": "jz@prod.hub"
 }

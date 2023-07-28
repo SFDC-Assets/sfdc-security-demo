@@ -1,0 +1,18 @@
+<template>
+    <div class="slds-box slds-box_x-small">
+        <lightning-card title="Field Audit Trail" icon-name="standard:calibration">
+            <div class="slds-card__body slds-card__body_inner slds-border_top">                                           
+                <lightning-datatable columns={columns} 
+                                    data={data} 
+                                    key-field="id"
+                                    hide-checkbox-column="true"
+                                    show-row-number-column="true">
+                </lightning-datatable>
+            </div>
+            <footer class="slds-card__footer">
+                <a class="slds-card__footer-action" href="javascript:void(0);">View All
+                </a>
+            </footer>
+        </lightning-card>
+    </div>
+</template>

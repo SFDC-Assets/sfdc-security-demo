@@ -8,7 +8,7 @@
     </values>
     <values>
         <field>privacycenter__Active__c</field>
-        <value xsi:type="xsd:boolean">true</value>
+        <value xsi:type="xsd:boolean">false</value>
     </values>
     <values>
         <field>privacycenter__Custom__c</field>
@@ -44,7 +44,7 @@
     </values>
     <values>
         <field>privacycenter__Masking_Type__c</field>
-        <value xsi:type="xsd:string">Retain</value>
+        <value xsi:nil="true"/>
     </values>
     <values>
         <field>privacycenter__Range_Max__c</field>

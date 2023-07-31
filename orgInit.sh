@@ -64,5 +64,5 @@ sfdx shane:data:file:upload -f ./attachment/wp-platform-encryption-architecture.
 
 # Generate records for threat detection
 sfdx force:apex:execute -f scripts/apex/genRecords.apex
-sfdx force:apex:execute -f scripts/apex/genContactHistory.apex
+# sfdx force:apex:execute -f scripts/apex/genContactHistory.apex
 

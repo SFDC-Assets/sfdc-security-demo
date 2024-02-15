@@ -39,7 +39,7 @@ sfdx shane:user:password:set -g User -l User -p salesforce1
 
 # Create Tenant Secrets
 sfdx force:data:record:create -s TenantSecret -v "Description=ProbabilisticKey"
-sfdx force:data:record:create -s TenantSecret -v "Description=SearchKey Type=SearchIndex"
+# sfdx force:data:record:create -s TenantSecret -v "Description=SearchKey Type=SearchIndex"
 sfdx force:data:record:create -s TenantSecret -v "Description=EventBusKey Type=EventBus"
 
 # Deploy platform encryption settings
@@ -48,7 +48,8 @@ sfdx force:mdapi:deploy -d ./src -w 5
 sfdx force:data:record:create -s TenantSecret -v "Description=DeterministicKey Type=DeterministicData"
 
 # Create another user for LoginAs
-sfdx force:user:create -a other-user
+sf org create user -f config/other-user.json
+# sfdx force:user:create -a other-user
 
 # Open the org.
 sfdx force:org:open

@@ -1,7 +1,6 @@
 {
   "orgName": "Main Security Demo",
   "edition": "Developer",
-  "release": "previous",
   "hasSampleData": true,
   "features": ["ServiceCloud", "PrivacyAnalytics", "PlatformEncryption", "CacheOnlyKeys", "EncryptionStatisticsInterval:86400", "EncryptionSyncInterval:604800", "AdditionalFieldHistory:40", "FieldAuditTrail", "DataMaskUser", "MobileSecurity", "EnableSetPasswordInApi", "EventLogFile", "SecurityEventEnabled", "WavePlatform", "EinsteinAnalyticsPlus", "AnalyticsAdminPerms", "AnalyticsAppEmbedded", "DevelopmentWave", "EinsteinAnalyticsPlus", "DataProcessingEngine", "AddCustomApps:29"],
   "adminEmail": "null@example.com",
@@ -15,7 +14,9 @@
     "eventSettings": {
       "enableDeleteMonitoringData": true,
       "enableTransactionSecurityPolicies": true,
-      "enableEventLogWaveIntegration": true
+      "enableEventLogWaveIntegration": true,
+      "eventLogRetentionDuration":30,
+      "enableEventLogGeneration":true
     },
     "securitySettings": {
       "enableAdminLoginAsAnyUser": true

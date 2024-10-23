@@ -1,6 +1,6 @@
 # Create the demo org
-sfdx shane:org:create -f config/project-scratch-def.json -d 5 -s --wait 60 --userprefix main -o security.demo
-# sf demoutil org create scratch -f config/project-scratch-def.json -d 5 -s -p main -e security.demo
+#sfdx shane:org:create -f config/project-scratch-def.json -d 5 -s --wait 60 --userprefix main -o security.demo
+sf demoutil org create scratch -f config/project-scratch-def.json -d 5 -s -p main -e security.demo
 
 # From Mobile Security
 sf package install -p 04t3A000001AJf2 --wait 20

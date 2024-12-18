@@ -59,8 +59,9 @@ sf automig load --inputdir ./data
 sf automig load --inputdir ./encryption-data
 # sfdx automig:load --inputdir ./cmdt
 
+# Temporarily disabled
 #sfdx shane:data:file:upload -f ./attachment/wp-platform-encryption-architecture.pdf -p `sfdx shane:data:id:query -o Case -w "Subject='Does not align with specs'"`
-sf data create file --file ./attachment/wp-platform-encryption-architecture.pdf --parent-id `sfdx shane:data:id:query -o Case -w "Subject='Does not align with specs'"`
+# sf data create file --file ./attachment/wp-platform-encryption-architecture.pdf --parent-id `sfdx shane:data:id:query -o Case -w "Subject='Does not align with specs'"`
 
 # Generate records for threat detection
 sf apex run -f scripts/apex/genRecords.apex

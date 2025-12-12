@@ -1,0 +1,341 @@
+<template>
+  <section class={rootClass}>
+    <section class="diag">
+      <div class="rtm-header">
+        <div class="rtm-header-left">
+          <div class="rtm-header-tsp-toggle">
+            <button class="rtm-tsp-toggle-pill" type="button" onclick={handleToggleTspPanel}>
+              <template if:true={showTspPanel}>Hide TSPs</template>
+              <template if:false={showTspPanel}>Show TSPs</template>
+            </button>
+          </div>
+          <div class="rtm-header-counts">
+            <div class="rtm-header-streams">
+              <div class="rtm-header-stream rtm-header-stream--api">
+                <div class="rtm-header-stream-main">
+                  <img src={headerApiBadgeUrl} alt="API events" class="rtm-header-badge" />
+                  <span class="pill pill-header-count">API Events: {apiEventCount}</span>
+                </div>
+              </div>
+              <div class="rtm-header-stream rtm-header-stream--report">
+                <div class="rtm-header-stream-main">
+                  <img src={headerReportBadgeUrl} alt="Report events" class="rtm-header-badge" />
+                  <span class="pill pill-header-count">Report Events: {reportEventCount}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <template if:true={hasAnyEvents}>
+            <button class="rtm-header-clear-btn" type="button" onclick={handleClearEvents} title="Clear events">
+              Clear
+            </button>
+          </template>
+          <template if:true={hasAnyExpandedCards}>
+            <button class="rtm-header-reset-btn" type="button" onclick={handleResetAllCards} title="Reset all cards">
+              ⟳
+            </button>
+          </template>
+        </div>
+        <div class="rtm-header-right">
+          <div class="rtm-header-time-toggle">
+            <span class="rtm-header-time-label">Time:</span>
+            <button
+              class={localTimeButtonClass}
+              data-mode="local"
+              onclick={handleTimeModeChange}
+              type="button"
+              title="Local = browser time zone"
+            >
+              Local
+            </button>
+            <button
+              class={utcTimeButtonClass}
+              data-mode="utc"
+              onclick={handleTimeModeChange}
+              type="button"
+              title="UTC = Salesforce event timestamp"
+            >
+              UTC
+            </button>
+          </div>
+          <div class="rtm-header-lane-toggle">
+            <span class="rtm-header-lane-label">Lanes:</span>
+            <button
+              class={separateLaneButtonClass}
+              data-mode="separate"
+              onclick={handleLaneModeChange}
+              type="button"
+            >
+              Separate
+            </button>
+            <button
+              class={mixedLaneButtonClass}
+              data-mode="mixed"
+              onclick={handleLaneModeChange}
+              type="button"
+            >
+              Mixed
+            </button>
+          </div>
+          <div class="rtm-header-theme-toggle">
+            <button
+              class="rtm-theme-toggle-pill"
+              onclick={handleThemeModeToggle}
+              type="button"
+              title="Toggle light/dark theme"
+            >
+              {themeToggleLabel}
+            </button>
+          </div>
+          <span class="rtm-header-title">Policy Streamer • Build: {buildTag}</span>
+        </div>
+      </div>
+    </section>
+
+    <template if:true={showTspPanel}>
+      <section class="rtm-tsp-panel">
+        <div class="rtm-tsp-panel-header">
+          <span class="rtm-tsp-panel-title">Transaction Security Policies</span>
+          <template if:true={hasTspPaging}>
+            <div class="rtm-tsp-page-controls">
+              <button class="rtm-tsp-page-btn" onclick={handleTspPagePrev} disabled={isFirstTspPage} title="Previous policies">
+                ‹
+              </button>
+              <span class="rtm-tsp-page-indicator">{tspPageIndicator}</span>
+              <button class="rtm-tsp-page-btn" onclick={handleTspPageNext} disabled={isLastTspPage} title="Next policies">
+                ›
+              </button>
+            </div>
+          </template>
+        </div>
+        <div class="rtm-tsp-panel-body">
+          <template if:true={tspColumns.length}>
+            <div class="rtm-tsp-columns">
+              <template for:each={tspColumns} for:item="col">
+                <div key={col.key} class="rtm-tsp-column">
+                  <template for:each={col.rows} for:item="tsp">
+                    <div key={tsp.id} class="rtm-tsp-row">
+                      <span class="rtm-tsp-light" data-active={tsp.isActive}></span>
+                      <span class="rtm-tsp-count">{tsp.firedCount}</span>
+                      <template if:true={tsp.eventBadgeUrl}>
+                        <img src={tsp.eventBadgeUrl} alt={tsp.typeLabel} class="rtm-tsp-event-badge" />
+                      </template>
+                      <span class={tsp.nameClass} title={tsp.name}>{tsp.name}</span>
+                      <button
+                        class={tsp.buttonClass}
+                        data-id={tsp.id}
+                        onclick={handleToggleTspActive}
+                        type="button"
+                        disabled={tsp.isBusy}
+                        title={tsp.toggleTitle}
+                      >
+                        <template if:true={tsp.isActive}>Enabled</template>
+                        <template if:false={tsp.isActive}>Disabled</template>
+                      </button>
+                    </div>
+                    <template if:true={tsp.error}>
+                      <div class="rtm-tsp-error" key={tsp.errorKey}>{tsp.error}</div>
+                    </template>
+                  </template>
+                </div>
+              </template>
+            </div>
+          </template>
+          <template if:false={tspColumns.length}>
+            <div class="rtm-tsp-empty">No API/Report TSPs found.</div>
+          </template>
+        </div>
+      </section>
+    </template>
+
+    <template for:each={laneGroups} for:item="lane">
+      <section key={lane.key} class="lane rtm-lane" data-lane={lane.key}>
+        <div class="lane-header rtm-lane-header">
+          <div class="pager">
+            <button data-lane={lane.key} onclick={handleLanePrev} disabled={lane.prevDisabled}>&lt;</button>
+            <span>{lane.pageDisplay}</span>
+            <button data-lane={lane.key} onclick={handleLaneNext} disabled={lane.nextDisabled}>&gt;</button>
+          </div>
+          <template if:true={lane.label}>
+            <span class="rtm-lane-label">{lane.label}</span>
+          </template>
+        </div>
+        <template if:true={lane.cards.length}>
+          <div class="cards-lane rtm-card-grid">
+            <template for:each={lane.cards} for:item="c">
+              <article key={c.id} class={c.cardClass}>
+                <div class="rtm-card-header">
+                  <div class="rtm-card-header-left">
+                    <template if:true={c.policyBadgeUrl}>
+                      <div class="rtm-badge rtm-badge--policy">
+                        <img src={c.policyBadgeUrl} alt="Policy outcome badge" class="rtm-badge__icon" />
+                      </div>
+                    </template>
+                    <template if:true={c.policyPillText}>
+                      <span
+                        class={c.policyPillDisplayClass}
+                        title={c.policyFullName}
+                        data-id={c.id}
+                        onclick={handleTogglePolicyName}
+                      >
+                        <template if:true={c.showFullPolicyName}>
+                          {c.policyFullName}
+                        </template>
+                        <template if:false={c.showFullPolicyName}>
+                          {c.policyShortName}
+                        </template>
+                      </span>
+                    </template>
+                  </div>
+                  <div class="rtm-card-header-right">
+                    <template if:false={c.showFullPolicyName}>
+                      <template if:true={c.datetime}>
+          <span class="pill pill-datetime" title={c.datetime}>
+                          <span class="pill-datetime__time">{c.timeDisplay}</span>
+                          <span class="pill-datetime__date">{c.dateDisplay}</span>
+                        </span>
+                      </template>
+                    </template>
+                    <template if:true={c.hasExpandedView}>
+                      <button class="rtm-card-reset-btn" data-id={c.id} onclick={handleResetCardView} type="button" title="Reset card view">
+                        ⟳
+                      </button>
+                    </template>
+                  </div>
+                </div>
+                <div class="rtm-card-title-row">
+                  <div class="rtm-badge rtm-badge--event rtm-title-event-badge">
+                    <img src={c.eventBadgeUrl} alt="Event badge" class="rtm-badge__icon" title={c.operation} />
+                  </div>
+                  <template if:true={c.reportName}>
+                    <span class={c.reportTitleClass} data-id={c.id} onclick={handleToggleReportTitle} title={c.reportName}>{c.reportName}</span>
+                    <template if:true={c.operationLabel}>
+                      <span class={c.operationTitleClass} data-id={c.id} onclick={handleToggleOperationTitle} title={c.operationLabel}>{c.operationLabel}</span>
+                    </template>
+                  </template>
+                  <template if:false={c.reportName}>
+                    <span class={c.clientTitleClass} data-id={c.id} onclick={handleToggleReportTitle} title={c.client}>{c.client}</span>
+                    <template if:true={c.operationLabel}>
+                      <span class={c.operationTitleClass} data-id={c.id} onclick={handleToggleOperationTitle} title={c.operationLabel}>{c.operationLabel}</span>
+                    </template>
+                  </template>
+                </div>
+                <div class="rtm-card-actor-row">
+                  <template if:true={c.who}>
+                    <span class={c.userActorClass} data-id={c.id} onclick={handleToggleUserActor} title={c.who}>{c.who}</span>
+                  </template>
+                  <template if:true={c.sourceIp}>
+                    <span class={c.ipActorClass} data-id={c.id} onclick={handleToggleIpActor} title={c.sourceIp}>IP: {c.sourceIp}</span>
+                  </template>
+                </div>
+                <div class="rtm-card-fields" data-id={c.id} onclick={handleToggleQuery}>
+                  <div class="rtm-card-fields-label">
+                    <img src={fieldBadgeUrl} alt="Fields" class="rtm-mini-badge" />
+                  </div>
+                  <div class="rtm-section-content">
+                    <template for:each={c.fieldsVisible} for:item="f">
+                      <span key={f} class="pill pill-field" title={f}>{f}</span>
+                    </template>
+                    <template if:true={c.fieldsMore}>
+                      <span class="pill pill-field-more" title={c.fieldsMore} data-id={c.id} onclick={handleShowMoreFields}>+{c.fieldsMore}</span>
+                    </template>
+                  </div>
+                </div>
+                <div class="rtm-card-objects-rows">
+                  <div class="rtm-card-objects">
+                    <div class="rtm-card-objects-left">
+                      <img src={objectBadgeUrl} alt="Objects" class="rtm-mini-badge" />
+                      <div class="rtm-section-content">
+                        <template for:each={c.objectsVisible} for:item="o">
+                          <span key={o} class="pill pill-object" title={o} data-id={c.id} onclick={handleShowRowsStart}>{o}</span>
+                        </template>
+                        <template if:true={c.objectsMore}>
+                          <span class="pill pill-object-more" title={c.objectsMore}>+{c.objectsMore}</span>
+                        </template>
+                        <template if:true={c.hasRows}>
+                          <template if:true={c.remainingRowCount}>
+                            <span class="pill pill-row-more rtm-rows-count" data-id={c.id} onclick={handleShowRowsStart} title="Show rows">
+                              +{c.remainingRowCount}
+                            </span>
+                          </template>
+                          <template if:false={c.remainingRowCount}>
+                            <span class="pill pill-row-more rtm-rows-count rtm-rows-count--all" aria-disabled="true" title="All rows shown">
+                              All
+                            </span>
+                          </template>
+                        </template>
+                      </div>
+                    </div>
+                    <template if:true={c.rawJson}>
+                      <div class="rtm-json-icons-row">
+                        <button
+                          class="rtm-json-icon-btn"
+                          data-id={c.id}
+                          onclick={handleCopyFullJson}
+                          onmouseenter={handleCopyJsonMouseEnter}
+                          onmouseleave={handleCopyJsonMouseLeave}
+                          type="button"
+                          title="Copy full event JSON"
+                        >
+                          <img src={c.copyJsonIconUrl} alt="Copy JSON" class="rtm-json-icon" />
+                        </button>
+                        <button
+                          class={c.jsonPillClass}
+                          data-id={c.id}
+                          onclick={handleToggleFullJson}
+                          type="button"
+                          title="Toggle JSON details"
+                        >
+                          JSON
+                        </button>
+                      </div>
+                    </template>
+                  </div>
+                  <template if:true={c.hasRows}>
+                  <template if:true={c.visibleRowCount}>
+                    <div class="rtm-records-rows rtm-records-rows--grid">
+                      <template for:each={c.visibleRowPairs} for:item="pair">
+                        <div key={pair.key} class="rtm-row-pair">
+                          <template for:each={pair.rows} for:item="row">
+                            <span
+                              key={row.key}
+                                class="pill pill-row"
+                                data-card-id={c.id}
+                                data-record-id={row.id}
+                                data-sobject-type={row.type}
+                                onclick={handleNavigateToRow}
+                                title="Open record"
+                              >
+                                {row.label}
+                              </span>
+                            </template>
+                          </div>
+                        </template>
+                      </div>
+                    </template>
+                  </template>
+                </div>
+                <template if:true={c.hasQuery}>
+                  <div class={c.queryClass}>
+                    <span class="query-full">{c.fullQuery}</span>
+                    <button class="copy-btn" data-id={c.id} onclick={handleCopyQuery}>Copy</button>
+                  </div>
+                </template>
+                <template if:true={c.showJson}>
+                  <div class="rtm-full-json">
+                    <div class={c.jsonClass}>
+                      <pre class="api-json-full">{c.rawJson}</pre>
+                    </div>
+                  </div>
+                </template>
+              </article>
+            </template>
+          </div>
+        </template>
+        <template if:false={lane.cards.length}>
+          <p>{lane.emptyMessage}</p>
+        </template>
+      </section>
+    </template>
+  </section>
+</template>

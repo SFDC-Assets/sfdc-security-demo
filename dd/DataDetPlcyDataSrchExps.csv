@@ -1,0 +1,2 @@
+CreatedById,CreatedDate,DataDetectPolicyId,Expression,Id,IsCaseSensitive,IsDeleted,IsKeywordSearch,LastModifiedById,LastModifiedDate,Name,SystemModstamp
+005RL00000MKZmYYAX,2025-11-18T23:15:59.000+0000,1DoRL000002mKmT0AU,"^[A-Za-z0-9!@#$%^&*()_+=\-{}[\]|:;\""'<>,.?/~]{32,64}$",1R7RL00000002GL0AY,true,false,false,005RL00000MKZmYYAX,2025-11-18T23:15:59.000+0000,Secret Key,2025-11-18T23:15:59.000+0000

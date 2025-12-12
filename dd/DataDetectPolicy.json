@@ -1,0 +1,19 @@
+[
+  {
+    "CreatedById": "005RL00000MKZmYYAX",
+    "CreatedDate": "2025-11-18T19:04:20.000+0000",
+    "Description": "This is a representative, typical data detect policy",
+    "EndTime": "2025-11-18T15:59:59.000+0000",
+    "Id": "1DoRL000002mKmT0AU",
+    "IsDeleted": false,
+    "LastModifiedById": "005RL00000MKZmYYAX",
+    "LastModifiedDate": "2025-11-18T23:16:24.000+0000",
+    "LastReferencedDate": "2025-11-18T23:16:25.000+0000",
+    "LastViewedDate": "2025-11-18T23:16:25.000+0000",
+    "Name": "Sample Data Detect Policy",
+    "OwnerId": "005RL00000MKZmYYAX",
+    "ScanType": "PatternMatch",
+    "StartTime": "2025-10-05T21:00:00.000+0000",
+    "SystemModstamp": "2025-11-18T23:16:24.000+0000"
+  }
+]

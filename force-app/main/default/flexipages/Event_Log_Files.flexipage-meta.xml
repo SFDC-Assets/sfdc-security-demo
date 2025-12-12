@@ -12,6 +12,7 @@
                     <value>&lt;p&gt;&lt;b style=&quot;font-size: 14px;&quot;&gt;Salesforce Event Log File Browser: &lt;/b&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt; https://salesforce-elf.herokuapp.com&lt;/span&gt;&lt;/p&gt;</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:richText</componentName>
+                <identifier>flexipage_richText</identifier>
             </componentInstance>
         </itemInstances>
         <name>region1</name>

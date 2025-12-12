@@ -4,6 +4,7 @@
         <itemInstances>
             <componentInstance>
                 <componentName>smon:streamingMonitor</componentName>
+                <identifier>smon_streamingMonitor</identifier>
             </componentInstance>
         </itemInstances>
         <name>main</name>

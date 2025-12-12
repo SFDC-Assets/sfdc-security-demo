@@ -2,7 +2,12 @@
   "orgName": "Main Security Demo",
   "edition": "Developer",
   "hasSampleData": true,
-  "features": ["ServiceCloud", "PrivacyAnalytics", "PlatformEncryption", "CacheOnlyKeys", "EncryptionStatisticsInterval:86400", "EncryptionSyncInterval:604800", "AdditionalFieldHistory:40", "FieldAuditTrail", "DataMaskUser", "MobileSecurity", "EnableSetPasswordInApi", "EventLogFile", "SecurityEventEnabled", "WavePlatform", "EinsteinAnalyticsPlus", "AnalyticsAdminPerms", "AnalyticsAppEmbedded", "DevelopmentWave", "EinsteinAnalyticsPlus", "DataProcessingEngine", "AddCustomApps:29"],
+  "features": ["ServiceCloud", "PrivacyAnalytics", "PlatformEncryption", "CacheOnlyKeys", 
+  "EncryptionStatisticsInterval:86400", "EncryptionSyncInterval:604800", "AdditionalFieldHistory:40", 
+  "FieldAuditTrail", "DataMaskUser", "MobileSecurity", "EnableSetPasswordInApi", "EventLogFile", 
+  "SecurityEventEnabled", "WavePlatform", "EinsteinAnalyticsPlus", "AnalyticsAdminPerms", 
+  "AnalyticsAppEmbedded", "DevelopmentWave", "EinsteinAnalyticsPlus", "DataProcessingEngine", 
+  "EINSTEIN1AIPLATFORM", "CustomerDataPlatform", "CustomerDataPlatformLite", "AddCustomApps:29"],
   "adminEmail": "null@example.com",
   "settings": {
     "lightningExperienceSettings": {
@@ -20,6 +25,12 @@
     },
     "securitySettings": {
       "enableAdminLoginAsAnyUser": true
+    },
+    "einsteinGptSettings": {
+      "enableEinsteinGptPlatform": true
+    },
+    "agentPlatformSettings": {
+      "enableAgentPlatform": true
     }
   }
 }

@@ -12,11 +12,13 @@
                     <value>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;b style=&quot;font-size: 24px;&quot;&gt;This is a big data simulator launchpad.&lt;/b&gt;&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;&lt;b style=&quot;font-size: 16px;&quot;&gt;&lt;i&gt;F&lt;/i&gt;&lt;/b&gt;&lt;i style=&quot;font-size: 16px;&quot;&gt;or filling Field Audit Trail simulation purposes.&lt;/i&gt;&lt;/p&gt;</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:richText</componentName>
+                <identifier>flexipage_richText</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
             <componentInstance>
                 <componentName>GenerateHistory</componentName>
+                <identifier>GenerateHistory</identifier>
             </componentInstance>
         </itemInstances>
         <name>main</name>

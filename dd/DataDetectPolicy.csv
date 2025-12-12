@@ -1,0 +1,2 @@
+CreatedById,CreatedDate,Description,EndTime,Id,IsDeleted,LastModifiedById,LastModifiedDate,LastReferencedDate,LastViewedDate,Name,OwnerId,ScanType,StartTime,SystemModstamp
+005RL00000MKZmYYAX,2025-11-18T19:04:20.000+0000,"This is a representative, typical data detect policy",2025-11-18T15:59:59.000+0000,1DoRL000002mKmT0AU,false,005RL00000MKZmYYAX,2025-11-18T23:16:24.000+0000,2025-11-18T23:16:25.000+0000,2025-11-18T23:16:25.000+0000,Sample Data Detect Policy,005RL00000MKZmYYAX,PatternMatch,2025-10-05T21:00:00.000+0000,2025-11-18T23:16:24.000+0000

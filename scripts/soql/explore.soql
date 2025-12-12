@@ -1,0 +1,2 @@
+SELECT CreatedById, CreatedDate, Description, EndTime, Id, IsDeleted, LastModifiedById, LastModifiedDate, LastReferencedDate, LastViewedDate, Name, OwnerId, ScanType, StartTime, SystemModstamp
+  FROM DataDetectPolicy
